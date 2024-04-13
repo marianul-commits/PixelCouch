@@ -21,7 +21,7 @@ struct ContentView: View {
             
             if let gameDetails = gameDetails {
                         ForEach(gameDetails, id: \.id) { gameDetail in
-                            CardView(person: gameDetail.name ?? "Unknown", gameDetails: [gameDetail])
+                            CardView(person: gameDetail.name ?? "Unknown", gameDetails: [gameDetail], gameImage: URL(string: gameDetail.backgroundImage ?? ""))
                         }
             }
         }.task {

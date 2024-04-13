@@ -12,6 +12,7 @@ struct CardView: View {
     
     var person: String
     var gameDetails: [GameDetails]?
+    var gameImage: URL?
     @State private var offset = CGSize.zero
     @State private var color: Color = .black
     
@@ -22,14 +23,25 @@ struct CardView: View {
                 .frame(width: 320, height: 420)
                 .shadow(radius: 4)
                 .overlay(
-                    VStack {
+                    ZStack {
 
                         // Displaying game details
                         if let gameDetails = gameDetails {
                             ForEach(gameDetails, id: \.id) { game in
-                                Text("\(game.name ?? "Unknown")")
-                                    .foregroundStyle(.white)
-
+                                RemoteImageView(url: gameImage)
+                                    .frame(width: 320, height: 420)
+                                    .cornerRadius(20)
+                                VStack {
+                                    Spacer()
+                                    ZStack{
+                                        Rectangle()
+                                            .foregroundStyle(color)
+                                            .opacity(0.4)
+                                            .frame(width: 320, height: 60)
+                                        Text("\(game.name ?? "Unknown")")
+                                            .foregroundStyle(.white)
+                                    }
+                                }
                             }
                         }
                     }

@@ -11,6 +11,7 @@
 		563BB08F2BB2285700A56B2B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563BB08E2BB2285700A56B2B /* ContentView.swift */; };
 		563BB0912BB2285800A56B2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 563BB0902BB2285800A56B2B /* Assets.xcassets */; };
 		563BB0942BB2285800A56B2B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 563BB0932BB2285800A56B2B /* Preview Assets.xcassets */; };
+		56447C4F2BCA9DB6007D27EB /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56447C4E2BCA9DB6007D27EB /* RemoteImage.swift */; };
 		5666075B2BBDEB9000D8AA70 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5666075A2BBDEB9000D8AA70 /* GameModel.swift */; };
 		5666075D2BBDEC6700D8AA70 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5666075C2BBDEC6700D8AA70 /* NetworkManager.swift */; };
 		5694B9862BC4552A004D2A16 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 5694B9852BC4552A004D2A16 /* Kingfisher */; };
@@ -23,6 +24,7 @@
 		563BB08E2BB2285700A56B2B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		563BB0902BB2285800A56B2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		563BB0932BB2285800A56B2B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		56447C4E2BCA9DB6007D27EB /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 		5666075A2BBDEB9000D8AA70 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		5666075C2BBDEC6700D8AA70 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		56B057742BBB5F8C00B4A7EB /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 			children = (
 				563BB08C2BB2285700A56B2B /* PixelCouchApp.swift */,
 				563BB08E2BB2285700A56B2B /* ContentView.swift */,
+				56447C4E2BCA9DB6007D27EB /* RemoteImage.swift */,
 				563BB0902BB2285800A56B2B /* Assets.xcassets */,
 				563BB0922BB2285800A56B2B /* Preview Content */,
 				56B057742BBB5F8C00B4A7EB /* CardView.swift */,
@@ -157,6 +160,7 @@
 				563BB08F2BB2285700A56B2B /* ContentView.swift in Sources */,
 				5666075B2BBDEB9000D8AA70 /* GameModel.swift in Sources */,
 				5666075D2BBDEC6700D8AA70 /* NetworkManager.swift in Sources */,
+				56447C4F2BCA9DB6007D27EB /* RemoteImage.swift in Sources */,
 				56B057752BBB5F8C00B4A7EB /* CardView.swift in Sources */,
 				563BB08D2BB2285700A56B2B /* PixelCouchApp.swift in Sources */,
 			);
