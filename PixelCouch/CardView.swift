@@ -10,65 +10,75 @@ import Kingfisher
 
 struct CardView: View {
     
-    var person: String
-    var gameDetails: [GameDetails]?
+    var gameName: String
     var gameImage: URL?
+    var gameDetails: [GameDetails]?
     @State private var offset = CGSize.zero
     @State private var color: Color = .black
-    
+
     var body: some View {
         ZStack{
-            RoundedRectangle(cornerRadius: 20, style: .continuous)
-                .foregroundStyle(color)
-                .frame(width: 320, height: 420)
-                .shadow(radius: 4)
-                .overlay(
-                    ZStack {
-
-                        // Displaying game details
-                        if let gameDetails = gameDetails {
-                            ForEach(gameDetails, id: \.id) { game in
-                                RemoteImageView(url: gameImage)
-                                    .frame(width: 320, height: 420)
-                                    .cornerRadius(20)
-                                VStack {
-                                    Spacer()
-                                    ZStack{
-                                        Rectangle()
-                                            .foregroundStyle(color)
-                                            .opacity(0.4)
-                                            .frame(width: 320, height: 60)
-                                        Text("\(game.name ?? "Unknown")")
-                                            .foregroundStyle(.white)
+            VStack {
+                RoundedRectangle(cornerRadius: 20, style: .continuous)
+                    .foregroundStyle(color)
+                    .frame(width: 320, height: 420)
+                    .shadow(radius: 4)
+                    .overlay(
+                        ZStack {
+                            
+                            // Displaying game details
+                            if let gameDetails = gameDetails {
+                                ForEach(gameDetails, id: \.id) { game in
+                                    RemoteImageView(url: gameImage)
+                                        .frame(width: 320, height: 420)
+                                        .cornerRadius(20)
+                                    VStack {
+                                        Spacer()
+                                        ZStack{
+                                            Rectangle()
+                                                .foregroundStyle(color)
+                                                .opacity(0.4)
+                                                .frame(width: 320, height: 60)
+                                            Text("\(game.name ?? "Unknown")")
+                                                .foregroundStyle(.white)
+                                        }
                                     }
                                 }
                             }
                         }
-                    }
-                )
-        }
-        .overlay(
-            RoundedRectangle(cornerRadius: 20)
-                .stroke(.white, lineWidth: 6)
-        )
-        .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
-        .offset(x: offset.width, y: offset.height * 0.1)
-        .rotationEffect(.degrees(Double(offset.width / 40)))
-        .gesture(
-            DragGesture()
-                .onChanged { gesture in
-                    offset = gesture.translation
-                    withAnimation {
-                        changeColor(width: offset.width)
-                    }
-                } .onEnded { _ in
-                    withAnimation {
-                        swipeAction(width: offset.width)
-                        changeColor(width: offset.width)
-                    }
+                    )
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 20)
+                            .stroke(.white, lineWidth: 6)
+                    )
+                    .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
+                    .offset(x: offset.width, y: offset.height * 0.1)
+                    .rotationEffect(.degrees(Double(offset.width / 40)))
+                    .gesture(
+                        DragGesture()
+                            .onChanged { gesture in
+                                offset = gesture.translation
+                                withAnimation {
+                                    changeColor(width: offset.width)
+                                }
+                            } .onEnded { _ in
+                                withAnimation {
+                                    swipeAction(width: offset.width)
+                                    changeColor(width: offset.width)
+                                }
+                            }
+                        
+                    )
+                    .padding()
+                HStack{
+                    ButtonThing(image: "bolt.heart.fill", color: .blue)
+                        .padding(.horizontal)
+                    ButtonThing(image: "heart.fill", color: .red)
+                        .padding(.horizontal)
                 }
-            
-        )
+                    .padding()
+            }
+        }
     }
     
     
@@ -100,5 +110,5 @@ struct CardView: View {
 }
 
 #Preview {
-    CardView(person: "Mario")
+    CardView(gameName: "Mario")
 }
