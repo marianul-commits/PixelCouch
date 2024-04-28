@@ -11,11 +11,10 @@ struct ButtonThing: View {
     
     var image: String
     var color: Color
+    var action: () -> Void
     
     var body: some View {
-        Button(action: {
-            print("soy tapped")
-        }) {
+        Button(action: action) {
             Image(systemName: image)
                 .renderingMode(.template)
                 .frame(width: 65, height: 65)
@@ -27,5 +26,7 @@ struct ButtonThing: View {
 }
 
 #Preview {
-    ButtonThing(image: "heart.fill", color: .red)
+    ButtonThing(image: "heart.fill", color: .red) {
+        print("meh")
+    }
 }

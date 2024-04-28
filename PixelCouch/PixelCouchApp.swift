@@ -6,9 +6,16 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
+
 struct PixelCouchApp: App {
+
+    init() {
+        FirebaseApp.configure()
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()

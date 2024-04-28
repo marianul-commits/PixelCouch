@@ -71,9 +71,17 @@ struct CardView: View {
                     )
                     .padding()
                 HStack{
-                    ButtonThing(image: "bolt.heart.fill", color: .blue)
+                    ButtonThing(image: "bolt.heart.fill", color: .blue) {
+                        print("i dont like this :(")
+                        offset = CGSize(width: -500, height: 0)
+                        changeColor(width: -500)
+                    }
                         .padding(.horizontal)
-                    ButtonThing(image: "heart.fill", color: .red)
+                    ButtonThing(image: "heart.fill", color: .red) {
+                        print("i like this :)")
+                        offset = CGSize(width: 500, height: 0)
+                        changeColor(width: 500)
+                    }
                         .padding(.horizontal)
                 }
                     .padding()
@@ -85,10 +93,10 @@ struct CardView: View {
     func swipeAction(width: CGFloat) {
         switch width {
         case -500...(-150):
-            print("i removed this")
+//            print("i removed this")
             offset = CGSize(width: -500, height: 0)
         case 150...500:
-            print("i liked this")
+//            print("i liked this")
             offset = CGSize(width: 500, height: 0)
         default:
             offset = .zero
@@ -108,6 +116,7 @@ struct CardView: View {
     }
     
 }
+
 
 #Preview {
     CardView(gameName: "Mario")

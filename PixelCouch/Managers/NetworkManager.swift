@@ -6,10 +6,11 @@
 //
 
 import Foundation
-    
-    private let apiKey = "c06a12411a5b4c9f9539198d88b1cc63"
-    
-func getGames() async throws -> [GameDetails] { 
+
+private let apiKey = "c06a12411a5b4c9f9539198d88b1cc63"
+
+
+func getGames() async throws -> [GameDetails] {
     
     let baseUrl = "https://api.rawg.io/api/games?page=1&page_size=30&key=\(apiKey)"
     

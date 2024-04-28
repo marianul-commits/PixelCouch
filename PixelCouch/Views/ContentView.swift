@@ -11,20 +11,20 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var gameDetails: [GameDetails]?
-
+    
     
     var body: some View {
         
         ZStack{
             Color(UIColor(resource: .brandMain))
                 .ignoresSafeArea()
-            
+            //            UserView()
             if let gameDetails = gameDetails {
-                        ForEach(gameDetails, id: \.id) { gameDetail in
-                            CardView(gameName: gameDetail.name ?? "Unknown",
-                                     gameImage: URL(string: gameDetail.backgroundImage ?? ""),
-                                     gameDetails: [gameDetail])
-                        }
+                ForEach(gameDetails, id: \.id) { gameDetail in
+                    CardView(gameName: gameDetail.name ?? "Unknown",
+                             gameImage: URL(string: gameDetail.backgroundImage ?? ""),
+                             gameDetails: [gameDetail])
+                }
             }
         }.task {
             do {
@@ -35,7 +35,6 @@ struct ContentView: View {
                 print("error")
             }
         }
-
     }
 }
 
