@@ -13,24 +13,41 @@ struct LoginView: View {
     @EnvironmentObject var authManager: AuthManager
     
     var body: some View {
-        VStack {
-            TextField("Email", text: $email)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-            SecureField("Password", text: $password)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-            Button("Sign In") {
-                authManager.signIn(email: email, password: password)
-            }
-            .padding(10)
-            .background(Color.gray.opacity(0.5))
-            .cornerRadius(20)
-            Button("Sign Up") {
-                authManager.signUp(email: email, password: password)
-            }
-            .padding(10)
-            .background(Color.gray.opacity(0.5))
-            .cornerRadius(20)
-        }.padding()
+        
+        ZStack{
+            Color.brandBackground.ignoresSafeArea()
+            VStack {
+                
+                Spacer()
+                
+                TextField("Email", text: $email)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .opacity(0.8)
+                    .padding(.vertical, 10)
+                SecureField("Password", text: $password)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .opacity(0.8)
+                    .padding(.vertical, 10)
+                Button("Sign In") {
+                    authManager.signIn(email: email, password: password)
+                }
+                .padding(10)
+                .background(Color.brandAccent)
+                .tint(.white)
+                .cornerRadius(8)
+                
+                Spacer()
+                
+                Button("Create Account") {
+                    authManager.signIn(email: email, password: password)
+                }
+                .padding(10)
+                .background(Color.brandMain.opacity(0.5))
+                .tint(.white)
+                .cornerRadius(8)
+                
+            }.padding()
+        }
     }
 }
 

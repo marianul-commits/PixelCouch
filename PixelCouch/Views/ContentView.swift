@@ -16,7 +16,7 @@ struct ContentView: View {
     var body: some View {
         
         ZStack{
-            Color(UIColor(resource: .brandMain))
+            Color(UIColor(resource: .brandBackground))
                 .ignoresSafeArea()
             //            UserView()
             if let gameDetails = gameDetails {

@@ -49,7 +49,7 @@ struct CardView: View {
                     )
                     .overlay(
                         RoundedRectangle(cornerRadius: 20)
-                            .stroke(.white, lineWidth: 6)
+                            .stroke(.brandAccent, lineWidth: 6)
                     )
                     .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
                     .offset(x: offset.width, y: offset.height * 0.1)
@@ -71,13 +71,13 @@ struct CardView: View {
                     )
                     .padding()
                 HStack{
-                    ButtonThing(image: "bolt.heart.fill", color: .blue) {
+                    ButtonThing(image: "xmark", color: .brandLike) {
                         print("i dont like this :(")
                         offset = CGSize(width: -500, height: 0)
                         changeColor(width: -500)
                     }
                         .padding(.horizontal)
-                    ButtonThing(image: "heart.fill", color: .red) {
+                    ButtonThing(image: "heart.fill", color: .brandMain) {
                         print("i like this :)")
                         offset = CGSize(width: 500, height: 0)
                         changeColor(width: 500)
@@ -107,9 +107,9 @@ struct CardView: View {
     func changeColor(width: CGFloat) {
         switch width {
         case -500...(-130):
-            color = .red
+            color = .brandLike
         case 130...500:
-            color = .green
+            color = .brandMain
         default:
             color = .black
         }

@@ -23,10 +23,13 @@
 		5658880C2BCEDB3F00FB5484 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5658880B2BCEDB3F00FB5484 /* FirebaseAnalyticsSwift */; };
 		5658880E2BCEDB3F00FB5484 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 5658880D2BCEDB3F00FB5484 /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		565888102BCEDB3F00FB5484 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 5658880F2BCEDB3F00FB5484 /* FirebaseAppCheck */; };
+		566316E32BEAA6D4001079C1 /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566316E22BEAA6D4001079C1 /* MainMenuView.swift */; };
+		566316E52BEAC4E3001079C1 /* FirstScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566316E42BEAC4E3001079C1 /* FirstScreenView.swift */; };
 		5666075B2BBDEB9000D8AA70 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5666075A2BBDEB9000D8AA70 /* GameModel.swift */; };
 		5666075D2BBDEC6700D8AA70 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5666075C2BBDEC6700D8AA70 /* NetworkManager.swift */; };
 		5692085B2BD965B700E13E26 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5692085A2BD965B700E13E26 /* DatabaseManager.swift */; };
 		5694B9862BC4552A004D2A16 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 5694B9852BC4552A004D2A16 /* Kingfisher */; };
+		56A14A482BEA9C530000CF10 /* HostRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A14A472BEA9C530000CF10 /* HostRoom.swift */; };
 		56B057752BBB5F8C00B4A7EB /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B057742BBB5F8C00B4A7EB /* CardView.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,9 +46,12 @@
 		565888002BCED78E00FB5484 /* Seed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seed.swift; sourceTree = "<group>"; };
 		565888022BCED8EC00FB5484 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		565888042BCEDAE800FB5484 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		566316E22BEAA6D4001079C1 /* MainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
+		566316E42BEAC4E3001079C1 /* FirstScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenView.swift; sourceTree = "<group>"; };
 		5666075A2BBDEB9000D8AA70 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		5666075C2BBDEC6700D8AA70 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		5692085A2BD965B700E13E26 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		56A14A472BEA9C530000CF10 /* HostRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostRoom.swift; sourceTree = "<group>"; };
 		56B057742BBB5F8C00B4A7EB /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,6 +79,9 @@
 				560D50E22BDEAEA2006EBDA1 /* LoginView.swift */,
 				565888022BCED8EC00FB5484 /* UserView.swift */,
 				563BB08E2BB2285700A56B2B /* ContentView.swift */,
+				56A14A472BEA9C530000CF10 /* HostRoom.swift */,
+				566316E22BEAA6D4001079C1 /* MainMenuView.swift */,
+				566316E42BEAC4E3001079C1 /* FirstScreenView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -212,12 +221,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				563BB08F2BB2285700A56B2B /* ContentView.swift in Sources */,
+				56A14A482BEA9C530000CF10 /* HostRoom.swift in Sources */,
 				5666075B2BBDEB9000D8AA70 /* GameModel.swift in Sources */,
+				566316E52BEAC4E3001079C1 /* FirstScreenView.swift in Sources */,
 				5692085B2BD965B700E13E26 /* DatabaseManager.swift in Sources */,
 				5666075D2BBDEC6700D8AA70 /* NetworkManager.swift in Sources */,
 				56447C4F2BCA9DB6007D27EB /* RemoteImage.swift in Sources */,
 				56447C512BCAA235007D27EB /* ButtonThing.swift in Sources */,
 				560D50E32BDEAEA2006EBDA1 /* LoginView.swift in Sources */,
+				566316E32BEAA6D4001079C1 /* MainMenuView.swift in Sources */,
 				56B057752BBB5F8C00B4A7EB /* CardView.swift in Sources */,
 				565888012BCED78E00FB5484 /* Seed.swift in Sources */,
 				560D50E12BDEAE44006EBDA1 /* AuthManager.swift in Sources */,

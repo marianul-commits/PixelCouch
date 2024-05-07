@@ -24,9 +24,3 @@ struct ButtonThing: View {
         }
     }
 }
-
-#Preview {
-    ButtonThing(image: "heart.fill", color: .red) {
-        print("meh")
-    }
-}
